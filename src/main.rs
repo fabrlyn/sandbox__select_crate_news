@@ -3,8 +3,8 @@ use select::predicate::Predicate;
 use select::predicate::{Attr, Name};
 
 fn main() {
-    let index = include_str!("./index.html");
-    let document = Document::from(index);
+    let webpage_content = include_str!("./index.html");
+    let document = Document::from(webpage_content);
     let head_line = document
         .find(
             Name("div")
